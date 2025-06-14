@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de KM</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="app" id="app">
+        <h1>🚕 Cálculo KM</h1>
+
+        <div class="section">
+            <h2>💼 Despesas Fixas</h2>
+            <label>Financiado ou alugado?
+                <select id="tipoCarro">
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </label>
+            <div id="divCarroValor" class="hidden">
+                <label>Valor mensal finan./aluguel:</label>
+                <div class="input-wrapper">
+                    <input type="number" id="valorCarro" placeholder="0.00">
+                </div>
+            </div>
+
+            <label>Valor mensal do seguro:</label>
+            <div class="input-wrapper">
+                <input type="number" id="seguro" placeholder="0.00">
+            </div>
+
+            <label>Valor anual do IPVA:</label>
+            <div class="input-wrapper">
+                <input type="number" id="ipva" placeholder="0.00">
+            </div>
+
+            <label>Gasto com internet (mensal):</label>
+            <div class="input-wrapper">
+                <input type="number" id="internet" placeholder="0.00">
+            </div>
+
+            <label>Ducha/Lava-jato (mensal):</label>
+            <div class="input-wrapper">
+                <input type="number" id="lavajato" placeholder="0.00">
+            </div>
+
+            <label>Outros gastos:</label>
+            <div class="input-wrapper">
+                <input type="number" id="gigu" placeholder="0.00">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚗 Despesas por KM</h2>
+            <label>Preço do Combustível:</label>
+            <div class="input-wrapper">
+                <input type="number" id="valorCombustivel" placeholder="0.00">
+            </div>
+
+            <label>Autonomia do veículo (Km/l):</label>
+            <input type="number" id="autonomia" placeholder="0">
+
+            <label>Km que vai rodar no dia:</label>
+            <input type="number" id="kmDia" placeholder="0">
+
+            <label>Gasto a cada revisão:</label>
+            <div class="input-wrapper">
+                <input type="number" id="revisao" placeholder="0.00">
+            </div>
+
+            <label>Gasto a cada troca de pneus:</label>
+            <div class="input-wrapper">
+                <input type="number" id="pneu" placeholder="0.00">
+            </div>
+
+            <label>Km que vai rodar no mês:</label>
+            <input type="number" id="kmMes" placeholder="0">
+        </div>
+
+        <div class="section">
+            <h2>💰 Lucro Desejado</h2>
+            <label>Lucro desejado no mês:</label>
+            <div class="input-wrapper">
+                <input type="number" id="lucroDesejado" placeholder="0.00">
+            </div>
+            <button onclick="calcularKm()">Calcular</button>
+        </div>
+
+        <div class="resultado" id="resultado"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Murillo Silva. Todos os direitos reservados.</p>
+        <p>Desenvolvido para motoristas que querem calcular seus custos de forma eficiente.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
